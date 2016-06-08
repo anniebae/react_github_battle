@@ -10,7 +10,7 @@ var ReactDOM = require('react-dom');
 
 var ProfilePic = React.createClass({
 	render: function () {
-		return <img src={this.props.imageUrl} style={{height: 100, width: 100}}>
+		return <img src={this.props.imageUrl} style={{height: 100, width: 100}} />
 	}
 });
 
@@ -19,7 +19,7 @@ var ProfileLink = React.createClass({
 		return (
 			<div>
 				<a href={'https://www.github.com/' + this.props.username}>
-					{this.props.name}
+					{this.props.username}
 				</a>
 			</div>
 		)
@@ -34,7 +34,6 @@ var ProfileName = React.createClass({
 	}
 });
 
-// container Component
 var Avatar = React.createClass({
 	render: function() {
 		return (
@@ -48,6 +47,7 @@ var Avatar = React.createClass({
 })
 
 ReactDOM.render(
-	<HelloWorld name="Annie" />,
+	<Avatar user={USER_DATA} />,
 	document.getElementById('app')
 );
+
