@@ -7,6 +7,14 @@ var USER_DATA = {
 var React = require('react');
 var ReactDOM = require('react-dom');
 
+// acronym to test React Components against (Addy Osmani)
+/*
+	Focused
+	Independent
+	Reusable
+	Small
+	Testable
+*/
 
 var ProfilePic = React.createClass({
 	render: function () {
@@ -34,6 +42,8 @@ var ProfileName = React.createClass({
 	}
 });
 
+// Avatar component encapsulates pic, link,name
+// nesting react components
 var Avatar = React.createClass({
 	render: function() {
 		return (
@@ -51,3 +61,7 @@ ReactDOM.render(
 	document.getElementById('app')
 );
 
+
+// var ProfileName = React.createClass({})
+// SAME THING
+// class ProfileName extends React.Component{}
