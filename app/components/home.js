@@ -5,7 +5,6 @@ var Home = React.createClass({
 		return (
 			<div>
 				Hello from Home!
-				{this.props.children}
 			</div>
 		)
 	}
