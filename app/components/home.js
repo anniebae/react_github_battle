@@ -1,5 +1,5 @@
 var React = require('react');
-var transparentBg = require('../').transparentBg;
+var transparentBg = require('../styles').transparentBg;
 var ReactRouter = require('react-router');
 var Link = ReactRouter.Link;
 
@@ -10,6 +10,7 @@ var Home = React.createClass({
 				<h1>GitHub Battle</h1>
 				<p className='lead'>Some fancy motto</p>
 				<Link to='/playerOne'>
+					<button type="button" className="btn btn-lg btn-success">Get Started</button>
 				</Link>
 				
 			</div>
