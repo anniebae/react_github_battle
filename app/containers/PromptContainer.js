@@ -3,6 +3,18 @@ var transparentBg = require('../styles').transparentBg;
 
 
 var PromptContainer = React.createClass({
+	getInitialState: function() {
+		return {
+			username: ''
+		}
+	},
+
+	onUpdateuser: function(e) {
+		this.setState({
+			username: e.target.value
+		})
+	},
+
 	render: function() {
 		console.log(this);
 		return (
@@ -14,6 +26,8 @@ var PromptContainer = React.createClass({
 							<input
 								className="form-control"
 								placeholder="Github Username"
+								onChange={this.onUpdateuser}
+								value={this.state.username}
 								type="text" />
 						</div>
 						<div className="form-group col-sm-4 col-sm-offset-4">
