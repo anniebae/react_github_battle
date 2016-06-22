@@ -15,13 +15,27 @@ var PromptContainer = React.createClass({
 		})
 	},
 
+	onSubmitUser: function(e) {
+		e.preventDefault();
+		var username = this.state.username;
+		this.setState ({
+			username: ''
+		});
+
+		if (this.props.routeParams.playerOne) {
+			// go to battle
+		} else {
+			// go to /playerTwo
+		}
+	},
+
 	render: function() {
 		console.log(this);
 		return (
 			<div className="jumbotron col-sm-6 col-sm-offset-3 text-center" style={transparentBg}>
 				<h1>{this.props.route.header}</h1>
 				<div className="col-sm-12">
-					<form>
+					<form onSubmit={this.onSubmitUser}>
 						<div className="form-group">
 							<input
 								className="form-control"
