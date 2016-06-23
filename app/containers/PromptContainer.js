@@ -3,6 +3,10 @@ var transparentBg = require('../styles').transparentBg;
 
 
 var PromptContainer = React.createClass({
+	contextTypes: {
+		router: React.PropTypes.object.isRequired
+	},
+
 	getInitialState: function() {
 		return {
 			username: ''
@@ -23,9 +27,18 @@ var PromptContainer = React.createClass({
 		});
 
 		if (this.props.routeParams.playerOne) {
+			this.context.router.push({
+				pathname: '/battle',
+				query: {
+					playerOne: this.props.routeParams.playerOne,
+					playerTwo: this.state.username
+				}
+			})
 			// go to battle
 		} else {
+			console.log(this.context);
 			// go to /playerTwo
+			this.context.router.push('/playerTwo/' + this.state.username)
 		}
 	},
 
