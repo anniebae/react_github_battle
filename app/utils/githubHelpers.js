@@ -24,7 +24,14 @@ function getPlayersData (player) {
   // get repos
   // getTotalStars
   // return object with that data
-  
+  return getRepos(player.login)
+    .then(getTotalStars)
+    .then(function (totalStars) {
+      return {
+        followers: player.followers,
+        totalStars: totalStars
+      }
+    })
 }
 
 function calculateScores(players) {
