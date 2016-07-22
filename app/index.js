@@ -13,12 +13,22 @@ var ProfilePic = React.createClass({
 	}
 });
 
+var Link = React.createClass({
+	render: function() {
+		return (
+			<span>
+				'heyy'
+			</span>
+		)
+	}
+});	
+
 var ProfileLink = React.createClass({
 	render: function() {
 		return (
-			<div>
+			<Link>
 				<a href={'http://adele.com/'}>{this.props.username}</a>
-			</div>
+			</Link>
 		)
 	}
 });
