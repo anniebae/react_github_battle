@@ -14,10 +14,16 @@ var ProfilePic = React.createClass({
 });
 
 var Link = React.createClass({
+	changeURL: function() {
+		window.location.replace(this.props.href)
+	},
 	render: function() {
 		return (
-			<span>
-				'heyy'
+			<span 
+
+				style={{color: 'blue', cursor: 'pointer'}}
+				onClick={this.changeURL}>
+				{this.props.children}
 			</span>
 		)
 	}
