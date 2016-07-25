@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "production" : "webpack -p",
+    "production": "webpack -p",
     "start": "webpack-dev-server --port 9000"
   },
   "repository": {
@@ -19,7 +19,8 @@
   "homepage": "https://github.com/anniebae/react_github_battle#readme",
   "dependencies": {
     "react": "^15.2.1",
-    "react-dom": "^15.2.1"
+    "react-dom": "^15.2.1",
+    "react-router": "^2.0.0-rc5"
   },
   "devDependencies": {
     "babel-core": "^6.11.4",
